@@ -1,0 +1,21 @@
+<%= form_for(@url) do |f| %>
+  <% if @url.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@url.errors.count, "error") %> prohibited this url from being saved:</h2>
+
+      <ul>
+      <% @url.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="actions">
+	 URL: <%= f.text_field :url %><br><br>
+	 Topic: <%= f.text_field :topic %><br><br>
+	 Notes: <%= f.text_area :notes %><br><br>
+    <%= f.submit %>
+  </div>
+<% end %>
