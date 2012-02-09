@@ -47,6 +47,7 @@ GEM
     method_source (0.7.0)
     mime-types (1.17.2)
     multi_json (1.0.4)
+    pg (0.12.2)
     polyglot (0.3.3)
     pry (0.9.8.1)
       coderay (~> 1.0.5)
@@ -119,6 +120,7 @@ PLATFORMS
 
 DEPENDENCIES
   jquery-rails
+  pg (= 0.12.2)
   pry
   rails (= 3.2)
   redis (= 2.2.2)
