@@ -1,8 +1,5 @@
-require 'net/http'
-require 'uri'
 class Url < ActiveRecord::Base
-  def self.get_page
-    
-    
+  def initiate_fetch
+    Resque.enqueue(Fetcher, self.url)
   end
 end
