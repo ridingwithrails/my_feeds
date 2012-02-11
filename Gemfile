@@ -9,6 +9,7 @@ gem 'pg', '0.12.2'
 gem 'feedzirra', '0.0.31'
 gem 'whenever', '0.7.2'
 gem 'chronic', '0.6.7'
+gem 'less-rails-bootstrap'
 
 group :development do
   gem "sqlite3"
