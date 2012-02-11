@@ -1,0 +1,3 @@
+<%= $redis.keys.each  do |k| %>
+   <%= $redis.get(k) if k.match "2012" %><br>
+<% end %>
