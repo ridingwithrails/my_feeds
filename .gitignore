@@ -1,10 +1,12 @@
 .idea/*
 cke-community.ids 
 csv_data/mobile/*
+.bundle
 
 db/*.sqlite3*
 db/rbin/*
 db/schema.rb
+dump.rdb
 
 tmp/*
 notes/
