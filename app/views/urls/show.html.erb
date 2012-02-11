@@ -1,5 +1,22 @@
 <p id="notice"><%= notice %></p>
 
+<table class="table table-striped table-bordered table-condensed">
+
+<tr>
+  <td>URL</td>
+  <td><%= link_to @url.url, @url.url %></td>
+</tr>
+<tr>
+  <td>Topic</td>
+  <td><%= @url.topic %></td>
+</tr>
+<tr>
+  <td>Notes</td>
+  <td><%= @url.notes %></td>
+</tr>
+
+</table>
+
 
 <%= link_to 'Edit', edit_url_path(@url) %> |
 <%= link_to 'Back', urls_path %>
