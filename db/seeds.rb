@@ -8,5 +8,5 @@
 
 Url.find_or_create_by_url({"url"=>"http://feeds.nytimes.com/nyt/rss/HomePage", "topic"=>"NY Homepage", "notes"=>"NY Times main page"})
 Url.find_or_create_by_url({"url"=>"http://rss.cnn.com/rss/cnn_topstories.rss", "topic"=>"CNN", "notes"=>"top news cnn"})
-Url.find_or_creat_by_url({"url"=>"http://www.npr.org/rss/rss.php?id=1001", "topic"=>"NPR", "notes"=>"rss"})
+Url.find_or_create_by_url({"url"=>"http://www.npr.org/rss/rss.php?id=1001", "topic"=>"NPR", "notes"=>"rss"})
 
