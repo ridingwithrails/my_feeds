@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Url.find_or_create_by({"url"=>"http://feeds.nytimes.com/nyt/rss/HomePage", "topic"=>"NY Homepage", "notes"=>"NY Times main page"})
+Url.find_or_create_by({"url"=>"http://rss.cnn.com/rss/cnn_topstories.rss", "topic"=>"CNN", "notes"=>"top news cnn"})
+Url.find_or_creat_by({"url"=>"http://www.npr.org/rss/rss.php?id=1001", "topic"=>"NPR", "notes"=>"rss"})
+
