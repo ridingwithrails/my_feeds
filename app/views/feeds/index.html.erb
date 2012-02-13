@@ -1,3 +1,18 @@
-<%= $redis.keys.each  do |k| %>
-   <%= $redis.get(k) if k.match "2012" %><br>
+<% $redis.keys.each  do |k| %>
+    <%if k.match "2012"%>
+        <div><%= $redis.get(k) %></div>
+    <% end %>
 <% end %>
+
+        <div>A Purple Squirrel In Pennsylvania Provokes A Host Of Theories</div>
+        <div>Obama Offers ‘Accommodation’ on Birth Control Rule</div>
+        <div>Obama Offers ‘Accommodation’ on Birth Control Rule</div>
+        <div>A Purple Squirrel In Pennsylvania Provokes A Host Of Theories</div>
+        <div>A Purple Squirrel In Pennsylvania Provokes A Host Of Theories</div>
+        <div>Obama Offers ‘Accommodation’ on Birth Control Rule</div>
+        <div>Obama compromises on birth control</div>
+        <div>A Purple Squirrel In Pennsylvania Provokes A Host Of Theories</div>
+        <div>Obama Offers ‘Accommodation’ on Birth Control Rule</div>
+        <div>A Purple Squirrel In Pennsylvania Provokes A Host Of Theories</div>
+        <div>Obama compromises on birth control</div>
+        <div>A Purple Squirrel In Pennsylvania Provokes A Host Of Theories</div>
