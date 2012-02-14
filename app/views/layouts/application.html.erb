@@ -36,7 +36,9 @@
 
 <div class="container">
   <p class="notice"><%= notice %></p>
+  <% if alert %>
   <p class="alert"><%= alert %></p>
+  <% end %>
   <%= yield %>
 
 </div>

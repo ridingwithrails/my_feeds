@@ -17,3 +17,6 @@
 body {
 	padding: 20px 0;
 }
+a:visited {
+    color: #08C;
+}
