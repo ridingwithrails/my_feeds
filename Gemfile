@@ -11,8 +11,10 @@ gem 'whenever', '0.7.2'
 gem 'chronic', '0.6.7'
 gem 'less-rails-bootstrap', '2.0.4'
 gem "rails-boilerplate", '0.1.6'
+gem 'devise','2.0.1'
+gem 'omniauth-facebook','1.2.0'
 
 group :development do
-  gem "sqlite3"
+  #gem "sqlite3"
   gem "pry"
 end
