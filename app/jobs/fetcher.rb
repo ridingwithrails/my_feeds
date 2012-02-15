@@ -11,7 +11,7 @@ class Fetcher
         :url => entry.url,
         :summary => entry.summary
       }
-      $redis.set(Digest::MD5.hexdigest(feed_hex), feed_hash.to_json )
+      $redis.set(Digest::MD5.hexdigest(feed_hex), feed_hash )
     end
   end
 
