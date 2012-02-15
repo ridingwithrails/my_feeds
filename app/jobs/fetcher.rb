@@ -1,3 +1,4 @@
+require "json"
 class Fetcher
   @queue = :fetch_q  
   def self.perform addr
@@ -11,7 +12,7 @@ class Fetcher
         :url => entry.url,
         :summary => entry.summary
       }
-      $redis.set(Digest::MD5.hexdigest(feed_hex), feed_hash )
+      $redis.set(Digest::MD5.hexdigest(feed_hex), feed_hash.to_json )
     end
   end
 
