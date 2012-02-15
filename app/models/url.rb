@@ -1,6 +1,7 @@
 class Url < ActiveRecord::Base
 
   def initiate_fetch
+    Rails.logger.debug "Getting story from #{self.url}"
     Resque.enqueue(Fetcher, self.url)
   end
 
