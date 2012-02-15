@@ -1,6 +1,4 @@
-<% $redis.keys.each  do |k| %>
-    <%unless k.include?('resque')%>
-        <div><%= $redis.get(k) %></div>
-    <% end %>
+<% @stories.each  do |s| %>
+    <div><%= s %></div>
 <% end %>
 
