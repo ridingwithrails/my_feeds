@@ -4,10 +4,10 @@ class FeedsController < ApplicationController
 
   def index
     @stories = $redis.keys.map do |key|
-      unless key.include?('resque')
-        $redis.get key
+    if key.include?('headline')
+        $redis.get(key)
       end
     end
-    respond_with(@stories.compact)
+    respond_with(@stories.compact.to_json)
   end
 end
