@@ -13,9 +13,13 @@ gem 'less-rails-bootstrap' , '2.0.4'
 gem 'devise','2.0.1'
 gem 'omniauth-facebook','1.2.0'
 gem 'koala'
+gem "youtube_it"
+
 
 group :development, :test do
   #gem "sqlite3"
+  gem "ruby-debug19"
   gem "pry"
   gem "rspec-rails"
+  gem 'flyrb'
 end
