@@ -13,4 +13,9 @@ class Url < ActiveRecord::Base
     p "getting fb"
     Resque.enqueue(FacebookFetcher, access_token)
   end
+
+  def self.youtube_comments(video_id)
+    Rails.logger.debug "Getting comments for Video #{video_id}"
+    Resque.enqueue(YoutubeFetcher, video_id)
+  end
 end
