@@ -1,16 +1,5 @@
+<%= render "video" %>
 
-<% @stories.each  do |s| %>
-    <div id="stories"><%= s %></div>
-<% end %>
-
-<%
-   @access_token = session["fb_access_token"]
-   @graph = Koala::Facebook::GraphAPI.new(@access_token)
-   @profile = @graph.get_connections("me", "feed")
-
-%>
-
-<%= debug @profile %>
 
 
 
