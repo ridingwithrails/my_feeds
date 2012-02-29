@@ -33,7 +33,7 @@
 </head>
 
 <body>
-
+<%= link_to("Sign Out", destroy_user_session_path, :method => :delete) if current_user %>
 <div class="container">
   <p class="notice"><%= notice %></p>
   <% if alert %>
@@ -46,10 +46,9 @@
   <%= javascript_include_tag "application" %>
   <!-- end scripts -->
 
-<%= link_to("Get Me OUT!", destroy_user_session_path, :method => :delete) if current_user %>
+<%= link_to("Sign Out", destroy_user_session_path, :method => :delete) if current_user %>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+
 
   <% if Rails.env.production? %>
   <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.

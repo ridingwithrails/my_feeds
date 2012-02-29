@@ -1,6 +1,6 @@
 class FeedsController < ApplicationController
   #include Common::Facebook
-  include Common::Youtube
+
   before_filter :authenticate_user! #:process_facebook_messages
   respond_to :html, :json
 
