@@ -18,4 +18,10 @@ class Url < ActiveRecord::Base
     Rails.logger.debug "Getting comments for Video #{video_id}"
     Resque.enqueue(YoutubeFetcher, video_id)
   end
+
+  def self.youtube_meta_data(video_id)
+    Rails.logger.debug "Getting video meta debugger"
+    Resque.enqueue(YoutubeMetaDataFetcher, video_id)
+  end
+
 end

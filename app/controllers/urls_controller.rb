@@ -25,7 +25,6 @@ class UrlsController < ApplicationController
   # GET /urls/new.json
   def new
     @url = Url.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @url }

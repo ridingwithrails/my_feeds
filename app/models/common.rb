@@ -11,8 +11,6 @@ module Common
     end
   end
   module Youtube
-    def get_youtube_client
-      YouTubeIt::Client.new
-    end
+
   end
 end
