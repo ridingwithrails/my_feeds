@@ -9,7 +9,8 @@ class YoutubeMetaDataFetcher < BaseFetcher
         :title => youtube_video_model.title,
         :duration => youtube_video_model.duration,
         :description => youtube_video_model.description,
-        :rating => youtube_video_model.rating.average
+        :rating => youtube_video_model.rating.average,
+        :expire_at => 4.hours.from_now
     )
   end
 end
