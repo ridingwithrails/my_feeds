@@ -1,12 +1,12 @@
 class Url < ActiveRecord::Base
 
-  def initiate_fetch
+  def initiate_fetch_headlines
     Rails.logger.debug "Getting story from #{self.url}"
     Resque.enqueue(HeadLineFetcher, self.url)
   end
 
   def self.fetch_all
-    Url.all.each {|u| u.initiate_fetch}
+    Url.all.each {|u| u.initiate_fetch_headlines}
   end
 
   def self.fetch_facebook_comments(access_token)
@@ -14,14 +14,6 @@ class Url < ActiveRecord::Base
     Resque.enqueue(FacebookFetcher, access_token)
   end
 
-  def self.youtube_comments(video_id)
-    Rails.logger.debug "Getting comments for Video #{video_id}"
-    Resque.enqueue(YoutubeFetcher, video_id)
-  end
 
-  def self.youtube_meta_data(video_id)
-    Rails.logger.debug "Getting video meta debugger"
-    Resque.enqueue(YoutubeMetaDataFetcher, video_id)
-  end
 
 end

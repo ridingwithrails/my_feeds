@@ -3,7 +3,9 @@ RedistTest::Application.routes.draw do
 
   resources :urls
   resources :feeds
+  match 'videos/comments' => 'feeds#index'
   resources :videos
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

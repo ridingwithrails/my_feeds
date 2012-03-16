@@ -11,6 +11,10 @@ every 1.minute do
   runner "Url.fetch_all", :environment => :development
 end
 
+every 1.minute do
+  runner "Video.fetch_comments", :environment => :development
+end
+
 #
 # every 2.hours do
 #   command "/usr/bin/some_great_command"

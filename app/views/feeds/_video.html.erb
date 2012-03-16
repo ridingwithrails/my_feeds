@@ -1,16 +1,3 @@
-<%
-   video_keys = $redis.keys.select {|key| key.include?("youtube")}
-   video_keys.each do |vk|
-%>
-  <%=  vk %> <br><br>
-<%
-     @comments_yaml = $redis.get vk
-     @comments = YAML.load(@comments_yaml)
-     @comments.each do |comment|
-%>
-      <%= process_video_comment(comment)%><br><br>
-    <% end %>
-  <%= @comments.last[:embed_code].html_safe %>
-<%
-   end
-%>
+<% @videos.each do |v| %>
+  <%= link_to(v, videos_comments_path(:youtube_id => v))  %>
+<%end %>

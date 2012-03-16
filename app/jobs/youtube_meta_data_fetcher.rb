@@ -12,5 +12,6 @@ class YoutubeMetaDataFetcher < BaseFetcher
         :rating => youtube_video_model.rating.average,
         :expire_at => 4.hours.from_now
     )
+    YoutubeCommentsFetcher.perform(video_id)
   end
 end
